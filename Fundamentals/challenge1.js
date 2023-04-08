@@ -20,9 +20,32 @@ m tall.
 
 // create BMI function
 function BMI_calc(weight, height) {
-    BMI = weight / height ** 2
-    return BMI
+    BMI = weight / height ** 2;
+    console.log(BMI);
+    return BMI;
 }
 
 
-console.log("Hello")
+// first comparison
+MarkBMI = BMI_calc(78, 1.69);
+JohnBMI = BMI_calc(92, 1.95);
+
+if (MarkBMI > JohnBMI) {
+    console.log("Mark's BMI is greater than John's");
+} else if (MarkBMI < JohnBMI) {
+    console.log("John's BMI is greater than Mark's");
+} else {
+    console.log("Potential error");
+};
+
+//second comparison
+MarkBMI = BMI_calc(95, 1.88);
+JohnBMI = BMI_calc(85, 1.76);
+
+if (MarkBMI > JohnBMI) {
+    console.log("Mark's BMI is greater than John's");
+} else if (MarkBMI < JohnBMI) {
+    console.log("John's BMI is greater than Mark's");
+} else {
+    console.log("Potential error");
+};
