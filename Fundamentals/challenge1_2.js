@@ -1,4 +1,4 @@
-// challenge 1
+// challenge 1_2
 
 /* 
 Mark and John are trying to compare their BMI (Body Mass Index), which is
