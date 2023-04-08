@@ -20,32 +20,37 @@ m tall.
 
 // create BMI function
 function BMI_calc(weight, height) {
-    BMI = weight / height ** 2;
-    console.log(BMI);
+    BMI = (weight / height ** 2).toFixed(1);
     return BMI;
-}
+};
 
+// create comparison
+function BMI_compare(BMI_1, BMI_2, name_1, name_2) {
+    if (BMI_1 > BMI_2) {
+        console.log(name_1 + "'s BMI (" + BMI_1 + ") is greater than " + name_2 + "'s (" + BMI_2 + ").");
+    } else if (BMI_1 < BMI_2) {
+        console.log(name_2 + "'s BMI (" + BMI_2 + ") is greater than " + name_1 + "'s (" + BMI_1 + ").");
+    } else if (BMI_1 == BMI_2) {
+        console.log(name_1 + "'s BMI (" + BMI_1 + ") is equal to " + name_2 + "'s (" + BMI_2 + ").");
+    } else {
+        console.log("Potential error");
+    }
+};
+
+
+//names
+Mark = "Mark"
+John = "John"
 
 // first comparison
 MarkBMI = BMI_calc(78, 1.69);
 JohnBMI = BMI_calc(92, 1.95);
 
-if (MarkBMI > JohnBMI) {
-    console.log("Mark's BMI is greater than John's");
-} else if (MarkBMI < JohnBMI) {
-    console.log("John's BMI is greater than Mark's");
-} else {
-    console.log("Potential error");
-};
+BMI_compare(MarkBMI, JohnBMI, Mark, John)
+
 
 //second comparison
 MarkBMI = BMI_calc(95, 1.88);
 JohnBMI = BMI_calc(85, 1.76);
 
-if (MarkBMI > JohnBMI) {
-    console.log("Mark's BMI is greater than John's");
-} else if (MarkBMI < JohnBMI) {
-    console.log("John's BMI is greater than Mark's");
-} else {
-    console.log("Potential error");
-};
+BMI_compare(MarkBMI, JohnBMI, Mark, John)
